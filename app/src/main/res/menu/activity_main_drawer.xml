@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_programmazione"
+            android:icon="@drawable/movie"
+            android:title="Programmazione" />
+        <item
+            android:id="@+id/nav_prezzi"
+            android:icon="@drawable/coins"
+            android:title="Prezzi" />
+        <item
+            android:id="@+id/nav_sale"
+            android:icon="@drawable/seats"
+            android:title="Sale" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/info"
+            android:title="Info" />
+    </group>
+
+    <item android:title="Utente">
+        <menu>
+            <item
+                android:id="@+id/nav_registrazione"
+                android:icon="@drawable/user"
+                android:title="Registrati" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,114 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeFilm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.peppe.popapp.fragments.FilmFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewTitolo" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTitolo"
+            android:layout_alignStart="@+id/textViewTitolo"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewNazione"
+            android:layout_alignEnd="@+id/textViewTitolo" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewAnno"
+            android:layout_below="@+id/textViewNazione"
+            android:layout_alignStart="@+id/textViewNazione" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewAnno"
+            android:layout_alignStart="@+id/textViewAnno"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewGenere" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewGenere"
+            android:layout_alignStart="@+id/textViewGenere"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewDurata" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDurata"
+            android:layout_alignStart="@+id/textViewDurata"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewRegia" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewRegia"
+            android:layout_alignStart="@+id/textViewRegia"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewCast" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCast"
+            android:layout_alignStart="@+id/textViewCast"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewProduzione" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewProduzione"
+            android:layout_alignStart="@+id/textViewProduzione"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewDistribuzione" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDistribuzione"
+            android:layout_alignStart="@+id/textViewDistribuzione"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewDataUscita" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDataUscita"
+            android:layout_alignStart="@+id/textViewDataUscita"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewTrama" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
