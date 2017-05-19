@@ -1,30 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
 
-        <LinearLayout
-            android:layout_margin="15dp"
-            android:orientation="vertical"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageSala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/seats" />
+
+            <TextView
+                android:id="@+id/textViewNumeroText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Numero"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/textViewNumero"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewNumeroText"
+                android:layout_alignBottom="@+id/textViewNumeroText"
+                android:layout_alignStart="@+id/textViewPosti"
+                android:text="TextView"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/textViewPostiText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textViewNumeroText"
+                android:layout_alignStart="@+id/textViewNumeroText"
+                android:layout_below="@+id/textViewNumeroText"
+                android:layout_toStartOf="@+id/textViewPosti"
+                android:text="Posti"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/textViewPosti"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewPostiText"
+                android:layout_alignBottom="@+id/textViewPostiText"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/textViewNumeroText"
+                android:text="TextView"
+                android:textAlignment="textEnd" />
+        </RelativeLayout>
+
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
