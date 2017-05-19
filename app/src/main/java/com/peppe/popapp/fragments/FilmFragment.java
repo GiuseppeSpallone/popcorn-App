@@ -81,7 +81,7 @@ public class FilmFragment extends Fragment {
 
         APIService service = retrofit.create(APIService.class);
 
-        Call<Film> call = service.getFilm("ue");
+        Call<Film> call = service.getFilm("Mamma ho perso l'aereo");
 
         call.enqueue(new Callback<Film>() {
             @Override
