@@ -11,13 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.peppe.popapp.R;
-import com.peppe.popapp.adapters.AdapterSale;
 import com.peppe.popapp.api.APIService;
 import com.peppe.popapp.models.Film;
-import com.peppe.popapp.models.Sala;
-import com.peppe.popapp.results.ResultSale;
-
-import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -41,7 +36,7 @@ public class FilmFragment extends Fragment {
 
         getActivity().setTitle("Film");
 
-        textViewTitolo = (TextView) getView().findViewById(R.id.textViewTitolo);
+        textViewTitolo = (TextView) getView().findViewById(R.id.textViewTitoloProgrammazione);
         textViewNazione = (TextView) getView().findViewById(R.id.textViewNazione);
         textViewAnno = (TextView) getView().findViewById(R.id.textViewAnno);
         textViewGenere = (TextView) getView().findViewById(R.id.textViewGenere);
