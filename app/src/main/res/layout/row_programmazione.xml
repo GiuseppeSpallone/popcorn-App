@@ -18,13 +18,13 @@
             android:layout_height="582dp">
 
             <ImageView
-                android:id="@+id/imageLocandina"
+                android:id="@+id/imagePoster"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/locandina"
                 android:layout_above="@+id/textViewTitoloProgrammazione"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/locandina" />
 
             <TextView
                 android:id="@+id/textViewTitoloProgrammazione"

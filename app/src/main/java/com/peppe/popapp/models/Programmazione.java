@@ -8,6 +8,9 @@ public class Programmazione {
     @SerializedName("titolo")
     @Expose
     private String titolo;
+    @SerializedName("id_poster")
+    @Expose
+    private String poster;
     @SerializedName("orario1")
     @Expose
     private String orario1;
@@ -21,8 +24,9 @@ public class Programmazione {
     @Expose
     private String sala;
 
-    public Programmazione(String titolo, String orario1, String orario2, String orario3, String sala) {
+    public Programmazione(String titolo, String poster, String orario1, String orario2, String orario3, String sala) {
         this.titolo = titolo;
+        this.poster = poster;
         this.orario1 = orario1;
         this.orario2 = orario2;
         this.orario3 = orario3;
@@ -35,6 +39,14 @@ public class Programmazione {
 
     public void setTitolo(String titolo) {
         this.titolo = titolo;
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
     }
 
     public String getOrario1() {

@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.peppe.popapp.R;
 import com.peppe.popapp.models.Programmazione;
@@ -34,6 +35,7 @@ public class AdapterProgrammazione extends RecyclerView.Adapter<AdapterProgramma
         final Programmazione programmazione = listaProgrammazione.get(position);
 
         holder.textViewTitolo.setText(programmazione.getTitolo());
+        //poster
         holder.textViewOrario1.setText(programmazione.getOrario1());
         holder.textViewOrario2.setText(programmazione.getOrario2());
         holder.textViewOrario3.setText(programmazione.getOrario3());
@@ -49,11 +51,13 @@ public class AdapterProgrammazione extends RecyclerView.Adapter<AdapterProgramma
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewTitolo, textViewOrario1, textViewOrario2, textViewOrario3, textViewSala;
         public CardView cardViewProgramazione;
+        public ImageView imagePoster;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             textViewTitolo = (TextView) itemView.findViewById(R.id.textViewTitoloProgrammazione);
+            imagePoster = (ImageView) itemView.findViewById(R.id.imagePoster);
             textViewOrario1 = (TextView) itemView.findViewById(R.id.textViewOrario1);
             textViewOrario2 = (TextView) itemView.findViewById(R.id.textViewOrario2);
             textViewOrario3 = (TextView) itemView.findViewById(R.id.textViewOrario3);

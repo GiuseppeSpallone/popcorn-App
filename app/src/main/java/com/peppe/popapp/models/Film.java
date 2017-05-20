@@ -38,8 +38,11 @@ public class Film {
     @SerializedName("trama")
     @Expose
     private String trama;
+    @SerializedName("id_poster")
+    @Expose
+    private String poster;
 
-    public Film(String titolo, String nazione, String anno, String genere, String durata, String regia, String cast, String produzione, String distribuzione, String dataUscita, String trama) {
+    public Film(String titolo, String nazione, String anno, String genere, String durata, String regia, String cast, String produzione, String distribuzione, String dataUscita, String trama, String poster) {
         this.titolo = titolo;
         this.nazione = nazione;
         this.anno = anno;
@@ -51,6 +54,7 @@ public class Film {
         this.distribuzione = distribuzione;
         this.dataUscita = dataUscita;
         this.trama = trama;
+        this.poster = poster;
     }
 
     public String getTitolo() {
@@ -141,4 +145,11 @@ public class Film {
         this.trama = trama;
     }
 
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
 }

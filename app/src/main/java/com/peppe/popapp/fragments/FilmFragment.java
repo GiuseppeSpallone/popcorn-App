@@ -99,8 +99,9 @@ public class FilmFragment extends Fragment {
                 String distribuzione = response.body().getDistribuzione();
                 String dataUscita = response.body().getDataUscita();
                 String trama = response.body().getTrama();
+                String poster = response.body().getPoster();
 
-                Film film = new Film(titolo, nazione, anno, genere, durata, regia, cast, produzione, distribuzione, dataUscita, trama);
+                Film film = new Film(titolo, nazione, anno, genere, durata, regia, cast, produzione, distribuzione, dataUscita, trama, poster);
 
                 textViewTitolo.setText(film.getTitolo());
                 textViewNazione.setText(film.getNazione());
