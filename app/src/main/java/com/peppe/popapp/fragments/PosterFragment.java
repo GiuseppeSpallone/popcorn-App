@@ -34,6 +34,7 @@ import static com.peppe.popapp.api.APIUrl.BASE_URL;
 public class PosterFragment extends Fragment {
 
     private AdapterViewFlipper adapterViewFlipperPoster;
+    SwipeRefreshLayout swipePoster;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -44,6 +45,24 @@ public class PosterFragment extends Fragment {
         adapterViewFlipperPoster = (AdapterViewFlipper) getView().findViewById(R.id.adapterViewFlipperPoster);
 
         loadPoster();
+
+        swipePoster = (SwipeRefreshLayout) getView().findViewById(R.id.swipePoster);
+
+        swipePoster.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipePoster.setRefreshing(true);
+
+                new android.os.Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        swipePoster.setRefreshing(false);
+                        loadPoster();
+                    }
+                },100);
+            }
+        });
     }
 
     private void loadPoster() {
