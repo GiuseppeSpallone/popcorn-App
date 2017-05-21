@@ -40,7 +40,7 @@ public class PosterFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Poster");
+        getActivity().setTitle(R.string.poster);
 
         adapterViewFlipperPoster = (AdapterViewFlipper) getView().findViewById(R.id.adapterViewFlipperPoster);
 

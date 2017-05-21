@@ -34,7 +34,7 @@ public class FilmFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Film");
+        getActivity().setTitle(R.string.film);
 
         textViewTitolo = (TextView) getView().findViewById(R.id.textViewTitoloProgrammazione);
         textViewNazione = (TextView) getView().findViewById(R.id.textViewNazione);

@@ -34,7 +34,7 @@ public class SaleFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Sale");
+        getActivity().setTitle(R.string.sale);
 
         recyclerViewSale = (RecyclerView) getView().findViewById(R.id.recyclerViewSale);
         recyclerViewSale.setHasFixedSize(true);

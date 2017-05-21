@@ -23,7 +23,7 @@ public class InfoFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Info");
+        getActivity().setTitle(R.string.info);
 
         textViewTelefono = (TextView) getView().findViewById(R.id.textViewTelefono);
         textViewEmail = (TextView) getView().findViewById(R.id.textViewEmail);

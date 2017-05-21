@@ -42,7 +42,7 @@ public class BigliettiFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Prezzi");
+        getActivity().setTitle(R.string.biglietti);
 
         recyclerViewBiglietti = (RecyclerView) getView().findViewById(R.id.recyclerViewBiglietti);
         recyclerViewBiglietti.setHasFixedSize(true);

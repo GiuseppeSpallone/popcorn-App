@@ -41,7 +41,7 @@ public class RegistrazioneFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Registrazione");
+        getActivity().setTitle(R.string.registrazione);
 
         editTextUsername = (EditText) getView().findViewById(R.id.editTextUsername);
         editTextEmail = (EditText) getView().findViewById(R.id.editTextEmail);

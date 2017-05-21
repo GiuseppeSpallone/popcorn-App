@@ -12,5 +12,14 @@
     <string name="emptyerror">Inserisci valori in tutti i campi</string>
     <string name="passwordsdiverse">Password e conferma password non coincidenti</string>
 
-    <!--NOME ACTIVITY-->
+    <!--FRAGMENTS-->
+    <string name="registrazione">Registrazione</string>
+    <string name="biglietti">Biglietti</string>
+    <string name="film">Film</string>
+    <string name="info">Info</string>
+    <string name="poster">Poster</string>
+    <string name="programmazione">Programmazione</string>
+    <string name="sale">Sale</string>
+
+
 </resources>

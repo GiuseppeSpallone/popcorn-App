@@ -39,7 +39,7 @@ public class ProgrammazioneFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Programmazione");
+        getActivity().setTitle(R.string.programmazione);
 
         recyclerViewProgrammazione = (RecyclerView) getView().findViewById(R.id.recyclerViewProgrammazione);
         recyclerViewProgrammazione.setHasFixedSize(true);
