@@ -73,7 +73,7 @@ public class BigliettiFragment extends Fragment {
 
     private void loadBiglietti() {
         final ProgressDialog progressDialog = new ProgressDialog(getContext());
-        progressDialog.setMessage("Loading data...");
+        progressDialog.setMessage(getContext().getResources().getString(R.string.load));
         progressDialog.show();
 
         Retrofit retrofit = new Retrofit.Builder()

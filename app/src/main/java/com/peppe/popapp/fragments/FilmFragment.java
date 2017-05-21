@@ -71,7 +71,7 @@ public class FilmFragment extends Fragment {
 
     private void loadFilm() {
         final ProgressDialog progressDialog = new ProgressDialog(getContext());
-        progressDialog.setMessage("Loading data...");
+        progressDialog.setMessage(getContext().getResources().getString(R.string.load));
         progressDialog.show();
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -81,7 +81,7 @@ public class FilmFragment extends Fragment {
 
         APIService service = retrofit.create(APIService.class);
 
-        Call<Film> call = service.getFilm("Mamma ho perso l'aereo");
+        Call<Film> call = service.getFilm("Spiderman");
 
         call.enqueue(new Callback<Film>() {
             @Override

@@ -10,7 +10,6 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -20,7 +19,6 @@
             android:layout_alignParentStart="true" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewTitoloProgrammazione"
@@ -30,7 +28,6 @@
             android:layout_alignEnd="@+id/textViewTitoloProgrammazione" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -39,7 +36,6 @@
             android:layout_alignStart="@+id/textViewNazione" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewAnno"
@@ -48,7 +44,6 @@
             android:id="@+id/textViewGenere" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewGenere"
@@ -57,7 +52,6 @@
             android:id="@+id/textViewDurata" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewDurata"
@@ -66,7 +60,6 @@
             android:id="@+id/textViewRegia" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewRegia"
@@ -75,7 +68,6 @@
             android:id="@+id/textViewCast" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewCast"
@@ -84,7 +76,6 @@
             android:id="@+id/textViewProduzione" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewProduzione"
@@ -93,7 +84,6 @@
             android:id="@+id/textViewDistribuzione" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewDistribuzione"
@@ -102,7 +92,6 @@
             android:id="@+id/textViewDataUscita" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewDataUscita"
@@ -118,7 +107,7 @@
             android:layout_alignBottom="@+id/textViewTitoloProgrammazione"
             android:layout_alignParentStart="true"
             android:layout_marginStart="11dp"
-            android:text="Titolo" />
+            android:text="@string/titolo" />
 
         <TextView
             android:id="@+id/textViewNazioneText"
@@ -127,7 +116,7 @@
             android:layout_alignBaseline="@+id/textViewNazione"
             android:layout_alignBottom="@+id/textViewNazione"
             android:layout_alignStart="@+id/textViewTitoloProgrammazioneText"
-            android:text="Nazione" />
+            android:text="@string/nazione" />
 
         <TextView
             android:id="@+id/textViewAnnoText"
@@ -136,7 +125,7 @@
             android:layout_alignBaseline="@+id/textViewAnno"
             android:layout_alignBottom="@+id/textViewAnno"
             android:layout_alignStart="@+id/textViewNazioneText"
-            android:text="Anno" />
+            android:text="@string/anno" />
 
         <TextView
             android:id="@+id/textViewGenereText"
@@ -145,7 +134,7 @@
             android:layout_alignBaseline="@+id/textViewGenere"
             android:layout_alignBottom="@+id/textViewGenere"
             android:layout_alignStart="@+id/textViewAnnoText"
-            android:text="Genere" />
+            android:text="@string/genere" />
 
         <TextView
             android:id="@+id/textViewDurataText"
@@ -154,7 +143,7 @@
             android:layout_alignBaseline="@+id/textViewDurata"
             android:layout_alignBottom="@+id/textViewDurata"
             android:layout_alignStart="@+id/textViewGenereText"
-            android:text="Durata" />
+            android:text="@string/durata" />
 
         <TextView
             android:id="@+id/textViewRegiaText"
@@ -163,7 +152,7 @@
             android:layout_alignBaseline="@+id/textViewRegia"
             android:layout_alignBottom="@+id/textViewRegia"
             android:layout_alignStart="@+id/textViewDurataText"
-            android:text="Regia" />
+            android:text="@string/regia" />
 
         <TextView
             android:id="@+id/textViewCastText"
@@ -171,7 +160,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/textViewProduzione"
             android:layout_alignStart="@+id/textViewRegiaText"
-            android:text="Cast" />
+            android:text="@string/cast" />
 
         <TextView
             android:id="@+id/textViewProduzioneText"
@@ -179,7 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/textViewDistribuzione"
             android:layout_alignStart="@+id/textViewCastText"
-            android:text="Produzione" />
+            android:text="@string/produzione" />
 
         <TextView
             android:id="@+id/textViewDistribuzioneText"
@@ -187,7 +176,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/textViewDataUscita"
             android:layout_alignStart="@+id/textViewProduzioneText"
-            android:text="Distribuzione" />
+            android:text="@string/distribuzione" />
 
         <TextView
             android:id="@+id/textViewDataUscitaText"
@@ -196,7 +185,7 @@
             android:layout_alignBaseline="@+id/textViewDataUscita"
             android:layout_alignBottom="@+id/textViewDataUscita"
             android:layout_alignStart="@+id/textViewDistribuzioneText"
-            android:text="Data uscita" />
+            android:text="@string/datauscita" />
 
         <TextView
             android:id="@+id/textViewTramaText"
@@ -204,7 +193,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/textViewTrama"
             android:layout_alignStart="@+id/textViewDataUscitaText"
-            android:text="Trama" />
+            android:text="@string/trama" />
 
     </RelativeLayout>
 

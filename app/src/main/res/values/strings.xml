@@ -6,13 +6,7 @@
 
     <string name="action_settings">Settings</string>
 
-    <!--REGISTRAZIONE-->
-    <string name="emailerror">Inserisci email valida</string>
-    <string name="passworderror">Inserisci almeno 8 caratteri, 1 maiuscola, 1 minuscola e 1 numero</string>
-    <string name="emptyerror">Inserisci valori in tutti i campi</string>
-    <string name="passwordsdiverse">Password e conferma password non coincidenti</string>
-
-    <!--FRAGMENTS-->
+    <!--FRAGMENTS E NAV-->
     <string name="registrazione">Registrazione</string>
     <string name="biglietti">Biglietti</string>
     <string name="film">Film</string>
@@ -21,5 +15,55 @@
     <string name="programmazione">Programmazione</string>
     <string name="sale">Sale</string>
 
+    <!--PROGRESS DIALOG-->
+    <string name="load">Caricamento dati...</string>
+
+    <!--REGISTRAZIONE-->
+    <string name="usernameUtente">Username</string>
+    <string name="emailUtente">Email</string>
+    <string name="passwordUtente">Password</string>
+    <string name="confermaPasswordUtente">Conferma password</string>
+    <string name="registrati">REGISTRATI</string>
+
+    <!--CONTROLLI REGISTRAZIONE-->
+    <string name="emailError">Inserisci email valida</string>
+    <string name="passwordError">Inserisci almeno 8 caratteri, 1 maiuscola, 1 minuscola e 1 numero</string>
+    <string name="emptyError">Inserisci valori in tutti i campi</string>
+    <string name="passwordsDiverseError">Password e conferma password non coincidenti</string>
+
+    <!--FILM-->
+    <string name="titolo">Titolo</string>
+    <string name="nazione">Nazione</string>
+    <string name="anno">Anno</string>
+    <string name="genere">Genere</string>
+    <string name="durata">Durata</string>
+    <string name="regia">Regia</string>
+    <string name="cast">Cast</string>
+    <string name="produzione">Produzione</string>
+    <string name="distribuzione">Distribuzione</string>
+    <string name="datauscita">Data uscita</string>
+    <string name="trama">Trama</string>
+
+    <!--PROGRAMMAZIONE-->
+    <string name="orario1">Orario 1</string>
+    <string name="orario2">Orario 2</string>
+    <string name="orario3">Orario 3</string>
+    <string name="sala">Sala</string>
+
+    <!--BIGLIETTO-->
+    <string name="tipoBiglietto">Tipo</string>
+    <string name="prezzoBiglietto">Prezzo</string>
+
+    <!--SALA-->
+    <string name="numeroSala">Numero</string>
+    <string name="postiSala">Posti</string>
+
+    <!--INFO-->
+    <string name="telefono">Telefono</string>
+    <string name="fax">Fax</string>
+    <string name="email">Email</string>
+    <string name="telefonoValore">3331234567</string>
+    <string name="faxValore">3331234567</string>
+    <string name="emailValore">popcorn@info.com</string>
 
 </resources>

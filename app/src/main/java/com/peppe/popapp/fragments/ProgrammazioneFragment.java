@@ -68,7 +68,7 @@ public class ProgrammazioneFragment extends Fragment {
 
     private void loadProgrammazione() {
         final ProgressDialog progressDialog = new ProgressDialog(getContext());
-        progressDialog.setMessage("Loading data...");
+        progressDialog.setMessage(getContext().getResources().getString(R.string.load));
         progressDialog.show();
 
         Retrofit retrofit = new Retrofit.Builder()

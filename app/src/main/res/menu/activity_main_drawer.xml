@@ -5,19 +5,19 @@
         <item
             android:id="@+id/nav_programmazione"
             android:icon="@drawable/movie"
-            android:title="Programmazione" />
+            android:title="@string/programmazione" />
         <item
             android:id="@+id/nav_prezzi"
             android:icon="@drawable/coins"
-            android:title="Prezzi" />
+            android:title="@string/biglietti" />
         <item
             android:id="@+id/nav_sale"
             android:icon="@drawable/seats"
-            android:title="Sale" />
+            android:title="@string/sale" />
         <item
             android:id="@+id/nav_info"
             android:icon="@drawable/info"
-            android:title="Info" />
+            android:title="@string/info" />
     </group>
 
     <item android:title="Utente">
@@ -25,7 +25,7 @@
             <item
                 android:id="@+id/nav_registrazione"
                 android:icon="@drawable/user"
-                android:title="Registrati" />
+                android:title="@string/registrazione" />
         </menu>
     </item>
 

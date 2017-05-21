@@ -14,7 +14,7 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="50dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="Telefono" />
+        android:text="@string/telefono" />
 
     <TextView
         android:id="@+id/textViewFaxText"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="Fax"
+        android:text="@string/fax"
         android:layout_below="@+id/textViewTelefonoText"
         android:layout_alignStart="@+id/textViewTelefonoText"
         android:layout_alignEnd="@+id/textViewTelefonoText" />
@@ -35,7 +35,7 @@
         android:layout_below="@+id/textViewFaxText"
         android:layout_marginTop="30dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="Email"
+        android:text="@string/email"
         android:layout_alignEnd="@+id/textViewFaxText" />
 
     <TextView
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textViewTelefonoText"
         android:layout_centerHorizontal="true"
-        android:text="3331234567" />
+        android:text="@string/telefonoValore" />
 
     <TextView
         android:id="@+id/textViewFax"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewEmailText"
         android:layout_alignStart="@+id/textViewTelefono"
-        android:text="3331234567"
+        android:text="@string/faxValore"
         android:textAlignment="textEnd" />
 
     <TextView
@@ -61,6 +61,6 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textViewEmailText"
         android:layout_alignStart="@+id/textViewFax"
-        android:text="popcorn@info.com" />
+        android:text="@string/emailValore" />
 
 </RelativeLayout>

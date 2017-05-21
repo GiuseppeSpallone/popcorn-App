@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Username"
+        android:hint="@string/usernameUtente"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp" />
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:hint="Email"
+        android:hint="@string/emailUtente"
         android:layout_below="@+id/editTextUsername"
         android:layout_alignStart="@+id/editTextUsername"
         android:layout_marginTop="25dp" />
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="Password"
+        android:hint="@string/passwordUtente"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/editTextEmail"
         android:layout_alignStart="@+id/editTextEmail" />
@@ -45,7 +45,7 @@
         android:layout_below="@+id/editTextPassword"
         android:layout_marginTop="25dp"
         android:ems="10"
-        android:hint="Conferma Password"
+        android:hint="@string/confermaPasswordUtente"
         android:inputType="textPassword" />
 
     <Button
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextConfermaPassword"
         android:layout_marginTop="25dp"
-        android:text="REGISTRATI"
+        android:text="@string/registrati"
         android:layout_alignEnd="@+id/editTextConfermaPassword"
         android:layout_alignStart="@+id/editTextConfermaPassword" />
 </RelativeLayout>

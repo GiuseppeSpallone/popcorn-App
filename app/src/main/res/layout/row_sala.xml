@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:text="Numero"
+                android:text="@string/numeroSala"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             <TextView
@@ -40,7 +40,6 @@
                 android:layout_alignBaseline="@+id/textViewNumeroText"
                 android:layout_alignBottom="@+id/textViewNumeroText"
                 android:layout_alignStart="@+id/textViewPosti"
-                android:text="TextView"
                 android:textAlignment="textEnd" />
 
             <TextView
@@ -51,7 +50,7 @@
                 android:layout_alignStart="@+id/textViewNumeroText"
                 android:layout_below="@+id/textViewNumeroText"
                 android:layout_toStartOf="@+id/textViewPosti"
-                android:text="Posti"
+                android:text="@string/postiSala"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             <TextView
@@ -62,7 +61,6 @@
                 android:layout_alignBottom="@+id/textViewPostiText"
                 android:layout_marginStart="16dp"
                 android:layout_toEndOf="@+id/textViewNumeroText"
-                android:text="TextView"
                 android:textAlignment="textEnd" />
         </RelativeLayout>
 

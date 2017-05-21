@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity
             InfoFragment infoFragment = new InfoFragment();
             fragmentTransaction.replace(R.id.fragment_container, infoFragment).commit();
 
-            /*FilmFragment filmFragment = new FilmFragment();
+           /* FilmFragment filmFragment = new FilmFragment();
             fragmentTransaction.replace(R.id.fragment_container, filmFragment).commit();*/
 
             /*PosterFragment posterFragment = new PosterFragment();

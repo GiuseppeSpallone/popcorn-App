@@ -53,8 +53,8 @@ public class RegistrazioneFragment extends Fragment {
 
         String regularExpressionPassword = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$";
 
-        regularExpressionValidation.addValidation(getActivity(), R.id.editTextEmail, Patterns.EMAIL_ADDRESS, R.string.emailerror);
-        regularExpressionValidation.addValidation(getActivity(), R.id.editTextPassword, regularExpressionPassword, R.string.passworderror);
+        regularExpressionValidation.addValidation(getActivity(), R.id.editTextEmail, Patterns.EMAIL_ADDRESS, R.string.emailError);
+        regularExpressionValidation.addValidation(getActivity(), R.id.editTextPassword, regularExpressionPassword, R.string.passwordError);
 
         buttonRegistrazione.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,10 +81,10 @@ public class RegistrazioneFragment extends Fragment {
         confermaPassword = editTextConfermaPassword.getText().toString();
 
         if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confermaPassword.isEmpty()) {
-            Toast.makeText(getContext(), R.string.emptyerror, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.emptyError, Toast.LENGTH_SHORT).show();
             return false;
         } else if (!password.equals(confermaPassword)) {
-            Toast.makeText(getContext(), R.string.passwordsdiverse, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.passwordsDiverseError, Toast.LENGTH_SHORT).show();
             return false;
         }
 

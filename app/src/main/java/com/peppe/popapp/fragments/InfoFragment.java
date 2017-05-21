@@ -31,7 +31,7 @@ public class InfoFragment extends Fragment {
         numeroTelefono = textViewTelefono.getText().toString();
         email = textViewEmail.getText().toString();
 
-        textViewTelefono.setOnClickListener(new View.OnClickListener() {
+        /*textViewTelefono.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent chiamata = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + numeroTelefono));
@@ -43,10 +43,10 @@ public class InfoFragment extends Fragment {
         textViewEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent email = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:fvdvd"));
+                Intent email = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + email));
                 startActivity(email);
             }
-        });
+        });*/
     }
 
     @Nullable

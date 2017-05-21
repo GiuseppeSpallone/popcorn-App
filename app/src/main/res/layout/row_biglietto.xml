@@ -31,14 +31,13 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:text="Tipo"
+                android:text="@string/tipoBiglietto"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/textViewTipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:textAlignment="textEnd"
                 android:layout_alignBaseline="@+id/textViewTipoText"
                 android:layout_alignBottom="@+id/textViewTipoText"
@@ -51,7 +50,7 @@
                 android:layout_alignStart="@+id/textViewTipoText"
                 android:layout_below="@+id/textViewTipoText"
                 android:layout_toStartOf="@+id/textViewTipo"
-                android:text="Posti"
+                android:text="@string/prezzoBiglietto"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             <TextView
@@ -59,7 +58,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:text="TextView"
                 android:textAlignment="textEnd"
                 android:layout_alignBaseline="@+id/textViewPrezzoText"
                 android:layout_alignBottom="@+id/textViewPrezzoText"
