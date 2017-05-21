@@ -42,6 +42,7 @@ public class AdapterProgrammazione extends RecyclerView.Adapter<AdapterProgramma
         holder.textViewOrario3.setText(programmazione.getOrario3());
         holder.textViewSala.setText(programmazione.getSala());
 
+        Glide.with(context).load(programmazione.getPoster()).into(holder.imagePoster);
 
     }
 
