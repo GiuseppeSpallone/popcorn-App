@@ -3,6 +3,7 @@ package com.peppe.popapp.fragments;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.peppe.popapp.R;
 import com.peppe.popapp.api.APIService;
 import com.peppe.popapp.api.APIUrl;
@@ -32,6 +35,8 @@ public class RegistrazioneFragment extends Fragment {
     String password;
     String confermaPassword;
 
+    private AwesomeValidation regularExpressionValidation;
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -44,14 +49,29 @@ public class RegistrazioneFragment extends Fragment {
         editTextConfermaPassword = (EditText) getView().findViewById(R.id.editTextConfermaPassword);
         buttonRegistrazione = (Button) getView().findViewById(R.id.buttonRegistrazione);
 
+        regularExpressionValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+        String regularExpressionPassword = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$";
+
+        regularExpressionValidation.addValidation(getActivity(), R.id.editTextEmail, Patterns.EMAIL_ADDRESS, R.string.emailerror);
+        regularExpressionValidation.addValidation(getActivity(), R.id.editTextPassword, regularExpressionPassword, R.string.passworderror);
+
         buttonRegistrazione.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (controlloValidità() == true) {
+                if (controlloValidità() == true && controlloRegularExpression() == true) {
                     loadRegistrazioneUtente();
                 }
             }
         });
+    }
+
+    private boolean controlloRegularExpression() {
+        if (regularExpressionValidation.validate()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private boolean controlloValidità() {
@@ -61,10 +81,10 @@ public class RegistrazioneFragment extends Fragment {
         confermaPassword = editTextConfermaPassword.getText().toString();
 
         if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confermaPassword.isEmpty()) {
-            Toast.makeText(getContext(), "Inserisci valori in tutti i campi", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.emptyerror, Toast.LENGTH_SHORT).show();
             return false;
         } else if (!password.equals(confermaPassword)) {
-            Toast.makeText(getContext(), "Password e conferma password diversi", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.passwordsdiverse, Toast.LENGTH_SHORT).show();
             return false;
         }
 
