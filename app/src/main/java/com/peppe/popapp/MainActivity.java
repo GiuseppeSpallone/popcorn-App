@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import com.peppe.popapp.fragments.FilmFragment;
 import com.peppe.popapp.fragments.InfoFragment;
 import com.peppe.popapp.fragments.BigliettiFragment;
+import com.peppe.popapp.fragments.PosterFragment;
 import com.peppe.popapp.fragments.ProgrammazioneFragment;
 import com.peppe.popapp.fragments.RegistrazioneFragment;
 import com.peppe.popapp.fragments.SaleFragment;
@@ -22,6 +23,7 @@ import com.peppe.popapp.fragments.SaleFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -65,41 +68,36 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         if (id == R.id.nav_programmazione) {
-
             ProgrammazioneFragment programmazioneFragment = new ProgrammazioneFragment();
-
             fragmentTransaction.replace(R.id.fragment_container, programmazioneFragment).commit();
 
         } else if (id == R.id.nav_prezzi) {
             BigliettiFragment bigliettiFragment = new BigliettiFragment();
-
             fragmentTransaction.replace(R.id.fragment_container, bigliettiFragment).commit();
 
         } else if (id == R.id.nav_sale) {
-
             SaleFragment saleFragment = new SaleFragment();
-
             fragmentTransaction.replace(R.id.fragment_container, saleFragment).commit();
 
         } else if (id == R.id.nav_info) {
-            InfoFragment infoFragment = new InfoFragment();
+           /* InfoFragment infoFragment = new InfoFragment();
+            fragmentTransaction.replace(R.id.fragment_container, infoFragment).commit();*/
 
-            fragmentTransaction.replace(R.id.fragment_container, infoFragment).commit();
             /*FilmFragment filmFragment = new FilmFragment();
             fragmentTransaction.replace(R.id.fragment_container, filmFragment).commit();*/
 
+            PosterFragment posterFragment = new PosterFragment();
+            fragmentTransaction.replace(R.id.fragment_container, posterFragment).commit();
+
         } else if (id == R.id.nav_registrazione) {
             RegistrazioneFragment registrazioneFragment = new RegistrazioneFragment();
-
             fragmentTransaction.replace(R.id.fragment_container, registrazioneFragment).commit();
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

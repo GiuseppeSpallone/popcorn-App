@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.peppe.popapp.R;
 import com.peppe.popapp.models.Programmazione;
 import java.util.List;
@@ -35,11 +37,11 @@ public class AdapterProgrammazione extends RecyclerView.Adapter<AdapterProgramma
         final Programmazione programmazione = listaProgrammazione.get(position);
 
         holder.textViewTitolo.setText(programmazione.getTitolo());
-        //poster
         holder.textViewOrario1.setText(programmazione.getOrario1());
         holder.textViewOrario2.setText(programmazione.getOrario2());
         holder.textViewOrario3.setText(programmazione.getOrario3());
         holder.textViewSala.setText(programmazione.getSala());
+
 
     }
 
