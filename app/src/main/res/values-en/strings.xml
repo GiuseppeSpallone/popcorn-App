@@ -12,7 +12,7 @@
     <string name="emailError">Enter valid email</string>
     <string name="emailUtente">Email</string>
     <string name="emailValore">popcorn@info.com</string>
-    <string name="emptyError">Enter values in all fields</string>
+    <string name="emptyError">Required field</string>
     <string name="fax">Fax</string>
     <string name="faxValore">3331234567</string>
     <string name="film">Movie</string>
@@ -31,7 +31,7 @@
     <string name="passwordUtente">Password</string>
     <string name="passwordsDiverseError">Password and password confirmation do not match</string>
     <string name="poster">Poster</string>
-    <string name="postiSala">Places</string>
+    <string name="postiSala">Seats</string>
     <string name="prezzoBiglietto">Price</string>
     <string name="produzione">Production</string>
     <string name="programmazione">Programming</string>

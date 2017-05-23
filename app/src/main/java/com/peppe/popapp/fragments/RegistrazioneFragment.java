@@ -52,6 +52,9 @@ public class RegistrazioneFragment extends Fragment {
         regularExpressionValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
         String regularExpressionPassword = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$";
+        String regularExpressionFieldNotEmpty = "^(?=\\s*\\S).*$";
+
+        regularExpressionValidation.addValidation(getActivity(), R.id.editTextUsername, regularExpressionFieldNotEmpty, R.string.emptyError);
 
         regularExpressionValidation.addValidation(getActivity(), R.id.editTextEmail, Patterns.EMAIL_ADDRESS, R.string.emailError);
         regularExpressionValidation.addValidation(getActivity(), R.id.editTextPassword, regularExpressionPassword, R.string.passwordError);
@@ -59,7 +62,7 @@ public class RegistrazioneFragment extends Fragment {
         buttonRegistrazione.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (controlloValidità() == true && controlloRegularExpression() == true) {
+                if (controlloPassword() == true && controlloRegularExpression() == true) {
                     loadRegistrazioneUtente();
                 }
             }
@@ -74,16 +77,11 @@ public class RegistrazioneFragment extends Fragment {
         }
     }
 
-    private boolean controlloValidità() {
-        username = editTextUsername.getText().toString();
-        email = editTextEmail.getText().toString();
+    private boolean controlloPassword() {
         password = editTextPassword.getText().toString();
         confermaPassword = editTextConfermaPassword.getText().toString();
 
-        if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confermaPassword.isEmpty()) {
-            Toast.makeText(getContext(), R.string.emptyError, Toast.LENGTH_SHORT).show();
-            return false;
-        } else if (!password.equals(confermaPassword)) {
+        if (!password.equals(confermaPassword)) {
             Toast.makeText(getContext(), R.string.passwordsDiverseError, Toast.LENGTH_SHORT).show();
             return false;
         }

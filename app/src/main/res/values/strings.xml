@@ -28,7 +28,7 @@
     <!--CONTROLLI REGISTRAZIONE-->
     <string name="emailError">Inserisci email valida</string>
     <string name="passwordError">Inserisci almeno 8 caratteri, 1 maiuscola, 1 minuscola e 1 numero</string>
-    <string name="emptyError">Inserisci valori in tutti i campi</string>
+    <string name="emptyError">Campo obbligatorio</string>
     <string name="passwordsDiverseError">Password e conferma password non coincidenti</string>
 
     <!--FILM-->

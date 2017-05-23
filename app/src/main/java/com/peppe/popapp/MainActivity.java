@@ -86,14 +86,14 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, saleFragment).commit();
 
         } else if (id == R.id.nav_info) {
-            InfoFragment infoFragment = new InfoFragment();
-            fragmentTransaction.replace(R.id.fragment_container, infoFragment).commit();
+            /*InfoFragment infoFragment = new InfoFragment();
+            fragmentTransaction.replace(R.id.fragment_container, infoFragment).commit();*/
 
            /* FilmFragment filmFragment = new FilmFragment();
             fragmentTransaction.replace(R.id.fragment_container, filmFragment).commit();*/
 
-            /*PosterFragment posterFragment = new PosterFragment();
-            fragmentTransaction.replace(R.id.fragment_container, posterFragment).commit();*/
+            PosterFragment posterFragment = new PosterFragment();
+            fragmentTransaction.replace(R.id.fragment_container, posterFragment).commit();
 
         } else if (id == R.id.nav_registrazione) {
             RegistrazioneFragment registrazioneFragment = new RegistrazioneFragment();
