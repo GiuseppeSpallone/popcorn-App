@@ -14,10 +14,10 @@ import retrofit2.http.Path;
 
 public interface APIService {
 
-    @GET("sale")
+    @GET("info/sale")
     Call<ResultSale> getSale();
 
-    @GET("prezzi")
+    @GET("info/prezzi")
     Call<ResultBiglietti> getPrezzi();
 
     @GET("programmazione")

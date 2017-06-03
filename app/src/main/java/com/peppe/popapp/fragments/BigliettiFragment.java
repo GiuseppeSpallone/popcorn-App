@@ -90,7 +90,7 @@ public class BigliettiFragment extends Fragment {
             public void onResponse(Call<ResultBiglietti> call, Response<ResultBiglietti> response) {
                 progressDialog.dismiss();
 
-                ArrayList<Biglietto> biglietti = response.body().getPrezzi();
+                ArrayList<Biglietto> biglietti = response.body().getBiglietti();
 
                 adapter = new AdapterBiglietti(biglietti, getContext());
                 recyclerViewBiglietti.setAdapter(adapter);

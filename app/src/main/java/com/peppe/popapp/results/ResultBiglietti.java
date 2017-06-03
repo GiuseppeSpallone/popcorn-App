@@ -7,16 +7,37 @@ import com.peppe.popapp.models.Biglietto;
 
 public class ResultBiglietti {
 
+    @SerializedName("result")
+    @Expose
+    private Boolean result;
+    @SerializedName("message")
+    @Expose
+    private String message = null;
     @SerializedName("prezzi")
     @Expose
     private ArrayList<Biglietto> biglietti;
 
-    public ArrayList<Biglietto> getPrezzi() {
+    public Boolean getResult() {
+        return result;
+    }
+
+    public void setResult(Boolean result) {
+        this.result = result;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public ArrayList<Biglietto> getBiglietti() {
         return biglietti;
     }
 
-    public void setPrezzi(ArrayList<Biglietto> prezzi) {
-        this.biglietti = prezzi;
+    public void setBiglietti(ArrayList<Biglietto> biglietti) {
+        this.biglietti = biglietti;
     }
-
 }
