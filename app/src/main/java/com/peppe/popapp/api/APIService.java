@@ -14,19 +14,21 @@ import retrofit2.http.Path;
 
 public interface APIService {
 
+    @FormUrlEncoded
+    @POST("utente/registrazione")
+    Call<ResultRegistrazione> registrazioneUtente(@Field("username") String username, @Field("email") String email, @Field("password") String password, @Field("token") String token);
+
+    @GET("programmazione")
+    Call<ResultProgrammazione> getProgrammazione();
+
+    @GET("programmazione/{titolo_film}")
+    Call<Film> getFilm(@Path("titolo_film") String titolo);
+
     @GET("info/sale")
     Call<ResultSale> getSale();
 
     @GET("info/prezzi")
     Call<ResultBiglietti> getPrezzi();
 
-    @GET("programmazione")
-    Call<ResultProgrammazione> getProgrammazione();
 
-    @FormUrlEncoded
-    @POST("utente/registrazione")
-    Call<ResultRegistrazione> registrazioneUtente(@Field("username") String username, @Field("email") String email, @Field("password") String password, @Field("token") String token);
-
-    @GET("film/{titolo}")
-    Call<Film> getFilm(@Path("titolo") String titolo);
 }

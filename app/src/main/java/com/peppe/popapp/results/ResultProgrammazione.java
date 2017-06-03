@@ -1,12 +1,19 @@
 package com.peppe.popapp.results;
 
 import java.util.ArrayList;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.peppe.popapp.models.Programmazione;
 
 public class ResultProgrammazione {
 
+    @SerializedName("result")
+    @Expose
+    private Boolean result;
+    @SerializedName("message")
+    @Expose
+    private String message = null;
     @SerializedName("films")
     @Expose
     private ArrayList<Programmazione> programmazione;
