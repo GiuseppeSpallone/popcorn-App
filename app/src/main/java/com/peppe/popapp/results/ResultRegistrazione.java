@@ -5,19 +5,22 @@ import com.google.gson.annotations.SerializedName;
 
 public class ResultRegistrazione {
 
-    @SerializedName("error")
+    @SerializedName("result")
     @Expose
-    private Boolean error;
+    private Boolean result;
     @SerializedName("message")
     @Expose
-    private String message;
+    private String message = null;
+    @SerializedName("registrazione")
+    @Expose
+    private Boolean registrazione;
 
-    public Boolean getError() {
-        return error;
+    public Boolean getResult() {
+        return result;
     }
 
-    public void setError(Boolean error) {
-        this.error = error;
+    public void setResult(Boolean result) {
+        this.result = result;
     }
 
     public String getMessage() {
@@ -26,6 +29,14 @@ public class ResultRegistrazione {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Boolean getRegistrazione() {
+        return registrazione;
+    }
+
+    public void setRegistrazione(Boolean registrazione) {
+        this.registrazione = registrazione;
     }
 
 }

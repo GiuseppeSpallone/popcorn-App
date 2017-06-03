@@ -1,5 +1,8 @@
 package com.peppe.popapp;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -17,13 +20,11 @@ import com.peppe.popapp.fragments.InfoFragment;
 import com.peppe.popapp.fragments.BigliettiFragment;
 import com.peppe.popapp.fragments.PosterFragment;
 import com.peppe.popapp.fragments.ProgrammazioneFragment;
-import com.peppe.popapp.fragments.RegistrazioneFragment;
 import com.peppe.popapp.fragments.SaleFragment;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 
     @Override
@@ -96,8 +96,8 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, posterFragment).commit();*/
 
         } else if (id == R.id.nav_registrazione) {
-            RegistrazioneFragment registrazioneFragment = new RegistrazioneFragment();
-            fragmentTransaction.replace(R.id.fragment_container, registrazioneFragment).commit();
+            Intent registrazione = new Intent(this, RegistrazioneActivity.class);
+            startActivity(registrazione);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

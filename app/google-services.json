@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "542819202741",
+    "firebase_url": "https://fir-popapp.firebaseio.com",
+    "project_id": "firebase-popapp",
+    "storage_bucket": "firebase-popapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542819202741:android:5ba661f847850d16",
+        "android_client_info": {
+          "package_name": "com.peppe.popapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542819202741-t8q5umrpneur9ivvfipmqa3uchk23hqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.peppe.popapp",
+            "certificate_hash": "d88a4e1c29dda7aff05a88bce17cd0cb8f8efc51"
+          }
+        },
+        {
+          "client_id": "542819202741-rkm29lae0b2e4lscs0aef8a36klr5kmq.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "542819202741-oan1ubmfu3ugui3nh8mhl3o8pue1cok6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjv5VMJ26LAiBs3-7PPkyqkCAwnpUMYzo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542819202741-rkm29lae0b2e4lscs0aef8a36klr5kmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

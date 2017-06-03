@@ -24,8 +24,8 @@ public interface APIService {
     Call<ResultProgrammazione> getProgrammazione();
 
     @FormUrlEncoded
-    @POST("registrazione")
-    Call<ResultRegistrazione> registrazioneUtente(@Field("username") String username, @Field("email") String email, @Field("password") String password);
+    @POST("utente/registrazione")
+    Call<ResultRegistrazione> registrazioneUtente(@Field("username") String username, @Field("email") String email, @Field("password") String password, @Field("token") String token);
 
     @GET("film/{titolo}")
     Call<Film> getFilm(@Path("titolo") String titolo);

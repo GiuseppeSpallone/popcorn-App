@@ -5,11 +5,13 @@ public class Utente {
     private String username;
     private String email;
     private String password;
+    private String token;
 
-    public Utente(String username, String email, String password) {
+    public Utente(String username, String email, String password, String token) {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.token = token;
     }
 
     public String getUsername() {
@@ -34,5 +36,13 @@ public class Utente {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }
