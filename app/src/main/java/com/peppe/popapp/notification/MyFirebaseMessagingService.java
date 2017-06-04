@@ -7,6 +7,8 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.peppe.popapp.MainActivity;
 
+import org.json.JSONObject;
+
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
@@ -14,18 +16,28 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        String message = remoteMessage.getData().get("message");
+        try {
+            JSONObject json = new JSONObject(remoteMessage.getData().toString());
 
-        Log.d(TAG, "Message: " + message);
+            JSONObject data = json.getJSONObject("data");
 
-        notifyUser(message);
+            String title = data.getString("message");
+            String message = data.getString("title");
+
+            notifyUser(title, message);
+
+            Log.d(TAG, "Title: " + title);
+            Log.d(TAG, "Message: " + message);
+
+        } catch (Exception e) {
+            Log.e(TAG, "Exception: " + e.getMessage());
+        }
     }
 
-    public void notifyUser(String notification) {
+    public void notifyUser(String title, String notification) {
         MyNotificationManager myNotificationManager = new MyNotificationManager(getApplicationContext());
-        myNotificationManager.showNotification(notification, new Intent(getApplicationContext(), MainActivity.class));
+        myNotificationManager.showNotification(title, notification, new Intent(getApplicationContext(), MainActivity.class));
     }
-
 
 
 }

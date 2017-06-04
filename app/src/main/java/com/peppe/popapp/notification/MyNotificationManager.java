@@ -17,11 +17,11 @@ public class MyNotificationManager {
 
     public static final int NOTIFICATION_ID = 234;
 
-    public  MyNotificationManager(Context ctx){
+    public MyNotificationManager(Context ctx) {
         this.ctx = ctx;
     }
 
-    public void showNotification(String notification, Intent intent){
+    public void showNotification(String title, String notification, Intent intent) {
 
         PendingIntent pendingIntent = PendingIntent.getActivities(
                 ctx,
@@ -35,6 +35,7 @@ public class MyNotificationManager {
         Notification mNotification = builder.setSmallIcon(R.drawable.icona)
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent)
+                .setContentTitle(title)
                 .setContentText(notification)
                 .setLargeIcon(BitmapFactory.decodeResource(ctx.getResources(), R.drawable.icona))
                 .build();
