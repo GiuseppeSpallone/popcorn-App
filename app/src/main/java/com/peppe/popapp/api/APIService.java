@@ -1,7 +1,7 @@
 package com.peppe.popapp.api;
 
-import com.peppe.popapp.models.Film;
 import com.peppe.popapp.results.ResultBiglietti;
+import com.peppe.popapp.results.ResultFilm;
 import com.peppe.popapp.results.ResultProgrammazione;
 import com.peppe.popapp.results.ResultRegistrazione;
 import com.peppe.popapp.results.ResultSale;
@@ -22,7 +22,7 @@ public interface APIService {
     Call<ResultProgrammazione> getProgrammazione();
 
     @GET("programmazione/{titolo_film}")
-    Call<Film> getFilm(@Path("titolo_film") String titolo);
+    Call<ResultFilm> getFilm(@Path("titolo_film") String titolo);
 
     @GET("info/sale")
     Call<ResultSale> getSale();

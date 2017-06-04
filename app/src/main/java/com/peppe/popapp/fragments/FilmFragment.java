@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.peppe.popapp.R;
 import com.peppe.popapp.api.APIService;
 import com.peppe.popapp.models.Film;
+import com.peppe.popapp.results.ResultFilm;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -81,25 +82,25 @@ public class FilmFragment extends Fragment {
 
         APIService service = retrofit.create(APIService.class);
 
-        Call<Film> call = service.getFilm("Spiderman");
+        Call<ResultFilm> call = service.getFilm("Mamma ho perso l'aereo");
 
-        call.enqueue(new Callback<Film>() {
+        call.enqueue(new Callback<ResultFilm>() {
             @Override
-            public void onResponse(Call<Film> call, Response<Film> response) {
+            public void onResponse(Call<ResultFilm> call, Response<ResultFilm> response) {
                 progressDialog.dismiss();
 
-                String titolo = response.body().getTitolo();
-                String nazione = response.body().getNazione();
-                String anno = response.body().getAnno();
-                String genere = response.body().getGenere();
-                String durata = response.body().getDurata();
-                String regia = response.body().getRegia();
-                String cast = response.body().getCast();
-                String produzione = response.body().getProduzione();
-                String distribuzione = response.body().getDistribuzione();
-                String dataUscita = response.body().getDataUscita();
-                String trama = response.body().getTrama();
-                String poster = response.body().getPoster();
+                String titolo = response.body().getFilm().getTitolo();
+                String nazione = response.body().getFilm().getNazione();
+                String anno = response.body().getFilm().getAnno();
+                String genere = response.body().getFilm().getGenere();
+                String durata = response.body().getFilm().getDurata();
+                String regia = response.body().getFilm().getRegia();
+                String cast = response.body().getFilm().getCast();
+                String produzione = response.body().getFilm().getProduzione();
+                String distribuzione = response.body().getFilm().getDistribuzione();
+                String dataUscita = response.body().getFilm().getDataUscita();
+                String trama = response.body().getFilm().getTrama();
+                String poster = response.body().getFilm().getPoster();
 
                 Film film = new Film(titolo, nazione, anno, genere, durata, regia, cast, produzione, distribuzione, dataUscita, trama, poster);
 
@@ -117,7 +118,7 @@ public class FilmFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<Film> call, Throwable t) {
+            public void onFailure(Call<ResultFilm> call, Throwable t) {
 
             }
         });
