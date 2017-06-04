@@ -6,7 +6,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.media.RingtoneManager;
 import android.media.audiofx.BassBoost;
+import android.net.Uri;
+import android.os.Vibrator;
 import android.support.v4.app.NotificationCompat;
 
 import com.peppe.popapp.R;
@@ -32,12 +35,15 @@ public class MyNotificationManager {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx);
 
-        Notification mNotification = builder.setSmallIcon(R.drawable.icona)
+        Notification mNotification = builder
+                .setSmallIcon(R.drawable.icona)
+                .setLargeIcon(BitmapFactory.decodeResource(ctx.getResources(), R.drawable.icona))
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent)
                 .setContentTitle(title)
                 .setContentText(notification)
-                .setLargeIcon(BitmapFactory.decodeResource(ctx.getResources(), R.drawable.icona))
+                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
+                .setVibrate(new long[] {1000, 1000, 1000, 1000, 1000})
                 .build();
 
         mNotification.flags |= Notification.FLAG_AUTO_CANCEL;
