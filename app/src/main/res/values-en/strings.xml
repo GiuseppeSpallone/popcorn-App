@@ -46,4 +46,5 @@
     <string name="usernameUtente">Username</string>
     <string name="registrazione">Registration</string>
     <string name="registrati">REGISTERED</string>
+    <string name="accedi">ACCESS</string>
 </resources>
