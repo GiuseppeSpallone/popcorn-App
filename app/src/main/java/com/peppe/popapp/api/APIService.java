@@ -1,5 +1,6 @@
 package com.peppe.popapp.api;
 
+import com.peppe.popapp.results.ResultAccesso;
 import com.peppe.popapp.results.ResultBiglietti;
 import com.peppe.popapp.results.ResultFilm;
 import com.peppe.popapp.results.ResultProgrammazione;
@@ -17,6 +18,10 @@ public interface APIService {
     @FormUrlEncoded
     @POST("utente/registrazione")
     Call<ResultRegistrazione> registrazioneUtente(@Field("username") String username, @Field("email") String email, @Field("password") String password, @Field("token") String token);
+
+    @FormUrlEncoded
+    @POST("utente/accesso")
+    Call<ResultAccesso> accessoUtente(@Field("username") String username, @Field("password") String password);
 
     @GET("programmazione")
     Call<ResultProgrammazione> getProgrammazione();

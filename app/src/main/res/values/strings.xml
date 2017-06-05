@@ -18,12 +18,13 @@
     <!--PROGRESS DIALOG-->
     <string name="load">Caricamento dati...</string>
 
-    <!--REGISTRAZIONE-->
+    <!--REGISTRAZIONE/ACCESSO-->
     <string name="usernameUtente">Username</string>
     <string name="emailUtente">Email</string>
     <string name="passwordUtente">Password</string>
     <string name="confermaPasswordUtente">Conferma password</string>
     <string name="registrati">REGISTRATI</string>
+    <string name="accedi">ACCEDI</string>
 
     <!--CONTROLLI REGISTRAZIONE-->
     <string name="emailError">Inserisci email valida</string>

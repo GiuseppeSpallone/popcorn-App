@@ -96,8 +96,11 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, posterFragment).commit();*/
 
         } else if (id == R.id.nav_registrazione) {
-            Intent registrazione = new Intent(this, RegistrazioneActivity.class);
-            startActivity(registrazione);
+            /*Intent registrazione = new Intent(this, RegistrazioneActivity.class);
+            startActivity(registrazione);*/
+
+            Intent accesso = new Intent(this, AccessoActivity.class);
+            startActivity(accesso);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
