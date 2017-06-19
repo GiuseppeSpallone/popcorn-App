@@ -8,6 +8,7 @@
 
     <!--FRAGMENTS E NAV-->
     <string name="registrazione">Registrazione</string>
+    <string name="accesso">Accesso</string>
     <string name="biglietti">Biglietti</string>
     <string name="film">Film</string>
     <string name="info">Info</string>

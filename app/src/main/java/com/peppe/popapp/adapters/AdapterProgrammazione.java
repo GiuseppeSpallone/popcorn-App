@@ -1,7 +1,10 @@
 package com.peppe.popapp.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,7 +14,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.peppe.popapp.MainActivity;
 import com.peppe.popapp.R;
+import com.peppe.popapp.fragments.FilmFragment;
 import com.peppe.popapp.models.Programmazione;
 import java.util.List;
 
@@ -67,6 +72,20 @@ public class AdapterProgrammazione extends RecyclerView.Adapter<AdapterProgramma
             textViewSala = (TextView) itemView.findViewById(R.id.textViewSala);
 
             cardViewProgramazione = (CardView) itemView.findViewById(R.id.cardViewProgrammazione);
+
+            cardViewProgramazione.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager fragmentManager = ((MainActivity)context).getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    String titolo = textViewTitolo.getText().toString();
+
+
+                    FilmFragment filmFragment = new FilmFragment();
+                    filmFragment.setTitolo(titolo);
+                    fragmentTransaction.replace(R.id.fragment_container, filmFragment).commit();
+                }
+            });
 
         }
 

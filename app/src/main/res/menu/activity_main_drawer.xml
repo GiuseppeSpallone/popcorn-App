@@ -26,6 +26,10 @@
                 android:id="@+id/nav_registrazione"
                 android:icon="@drawable/user"
                 android:title="@string/registrazione" />
+            <item
+                android:id="@+id/nav_accesso"
+                android:icon="@drawable/enter"
+                android:title="@string/accesso" />
         </menu>
     </item>
 

@@ -26,6 +26,8 @@ import com.peppe.popapp.fragments.SaleFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    FragmentManager fragmentManager = getSupportFragmentManager();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,11 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        ProgrammazioneFragment programmazioneFragment = new ProgrammazioneFragment();
+        fragmentTransaction.replace(R.id.fragment_container, programmazioneFragment).commit();
     }
 
     @Override
@@ -70,7 +77,6 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         if (id == R.id.nav_programmazione) {
@@ -86,22 +92,19 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, saleFragment).commit();
 
         } else if (id == R.id.nav_info) {
-            /*InfoFragment infoFragment = new InfoFragment();
-            fragmentTransaction.replace(R.id.fragment_container, infoFragment).commit();*/
-
-            FilmFragment filmFragment = new FilmFragment();
-            fragmentTransaction.replace(R.id.fragment_container, filmFragment).commit();
-
-            /*PosterFragment posterFragment = new PosterFragment();
-            fragmentTransaction.replace(R.id.fragment_container, posterFragment).commit();*/
+            InfoFragment infoFragment = new InfoFragment();
+            fragmentTransaction.replace(R.id.fragment_container, infoFragment).commit();
 
         } else if (id == R.id.nav_registrazione) {
-            /*Intent registrazione = new Intent(this, RegistrazioneActivity.class);
-            startActivity(registrazione);*/
+            Intent registrazione = new Intent(this, RegistrazioneActivity.class);
+            startActivity(registrazione);
 
+        } else if (id == R.id.nav_accesso) {
             Intent accesso = new Intent(this, AccessoActivity.class);
             startActivity(accesso);
+
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -13,30 +13,30 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="34dp"
         android:layout_marginTop="50dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="@string/telefono" />
+        android:text="@string/telefono"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/textViewFaxText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="@string/fax"
-        android:layout_below="@+id/textViewTelefonoText"
+        android:layout_alignEnd="@+id/textViewTelefonoText"
         android:layout_alignStart="@+id/textViewTelefonoText"
-        android:layout_alignEnd="@+id/textViewTelefonoText" />
+        android:layout_below="@+id/textViewTelefonoText"
+        android:layout_marginTop="32dp"
+        android:text="@string/fax"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/textViewEmailText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewFaxText"
         android:layout_alignStart="@+id/textViewFaxText"
         android:layout_below="@+id/textViewFaxText"
         android:layout_marginTop="30dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:text="@string/email"
-        android:layout_alignEnd="@+id/textViewFaxText" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/textViewTelefono"

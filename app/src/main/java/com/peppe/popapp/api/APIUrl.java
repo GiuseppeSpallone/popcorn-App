@@ -1,5 +1,5 @@
 package com.peppe.popapp.api;
 
 public class APIUrl {
-    public static final String BASE_URL = "http://192.168.1.104/popcorn_api/public/";
+    public static final String BASE_URL = "http://192.168.1.108/popcorn_api/public/";
 }

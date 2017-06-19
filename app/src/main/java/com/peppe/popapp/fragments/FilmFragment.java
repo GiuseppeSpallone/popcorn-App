@@ -29,7 +29,9 @@ public class FilmFragment extends Fragment {
             textViewDurata, textViewRegia, textViewCast, textViewProduzione,
             textViewDistribuzione, textViewDataUscita, textViewTrama;
 
+
     SwipeRefreshLayout swipeFilm;
+    String titolo;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -65,7 +67,7 @@ public class FilmFragment extends Fragment {
                         swipeFilm.setRefreshing(false);
                         loadFilm();
                     }
-                },100);
+                }, 100);
             }
         });
     }
@@ -82,7 +84,7 @@ public class FilmFragment extends Fragment {
 
         APIService service = retrofit.create(APIService.class);
 
-        Call<ResultFilm> call = service.getFilm("Mamma ho perso l'aereo");
+        Call<ResultFilm> call = service.getFilm(titolo);
 
         call.enqueue(new Callback<ResultFilm>() {
             @Override
@@ -128,5 +130,9 @@ public class FilmFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_film, container, false);
+    }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
     }
 }

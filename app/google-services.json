@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "542819202741-fv23ls1p0svqre5u2b97ok5bbiccajns.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.peppe.popapp",
+            "certificate_hash": "310615bd3e3b89b0d3aa4c7750e29a80ea6f2e9c"
+          }
+        },
+        {
           "client_id": "542819202741-t8q5umrpneur9ivvfipmqa3uchk23hqf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
